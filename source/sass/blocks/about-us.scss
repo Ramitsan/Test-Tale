@@ -1,21 +1,24 @@
 .about-us {
-    padding: 0 20px;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  padding-bottom: 50px;
+  background-color: rgb(219, 219, 219);
 }
 
 .about-us__item {
-  width: 100%;  
+  width: 100%;
   position: relative;
   padding-top: 80px;
 }
 
-.about-us__item::before  {
+.about-us__item::before {
   content: "";
   position: absolute;
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
-  background-size: 60px 60px;  
+  background-size: 60px 60px;
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
@@ -38,4 +41,36 @@
 .about-us__text {
   width: 80%;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("../../assets/img/white-construction-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
+  }
+
+  .about-us__item {
+    width: 40%;
+    text-align: left;
+    padding-left: 130px;
+  }
+
+  .about-us__item::before {
+    left: 0;
+    transform: translateX(100%);
+    top: 50%;
+  }
+
+  .about-us__item--energo {
+    margin-right: 100px;
+  }
+
+  .about-us__text {    
+    margin: 0;
+  }
 }
