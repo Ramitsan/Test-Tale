@@ -1,0 +1,41 @@
+.about-us {
+    padding: 0 20px;
+    padding-bottom: 50px;
+}
+
+.about-us__item {
+  width: 100%;  
+  position: relative;
+  padding-top: 80px;
+}
+
+.about-us__item::before  {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;  
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-us__item--energo::before {
+  background-image: url("../../assets/icons/energo-icon.svg");
+}
+
+.about-us__item--civil::before {
+  background-image: url("../../assets/icons/civil-icon.svg");
+}
+
+.about-us__title {
+  @include second-level-headings();
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.about-us__text {
+  width: 80%;
+  margin: 0 auto;
+}

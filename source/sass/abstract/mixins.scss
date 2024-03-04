@@ -1,0 +1,14 @@
+@mixin second-level-headings () {
+  font-family: $font-prompt;
+  font-style: normal;
+  font-weight: 500;   
+  color: $header-color;
+  text-transform: uppercase;
+}
+
+@mixin third-level-headings () {
+  font-family: $font-prompt;
+  font-style: normal;
+  font-weight: 600;
+  color: $white;
+}

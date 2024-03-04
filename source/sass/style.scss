@@ -1,4 +1,10 @@
 @import "node_modules/normalize.css/normalize";
 @import "base/fonts.scss";
 @import "abstract/variables.scss";
+@import "abstract/mixins.scss";
 @import "base/base.scss";
+@import "blocks/promo-block.scss";
+@import "blocks/building.scss";
+@import "blocks/gallery.scss";
+@import "blocks/photo-block.scss";
+@import "blocks/about-us.scss";

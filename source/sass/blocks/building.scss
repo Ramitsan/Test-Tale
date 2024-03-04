@@ -1,0 +1,80 @@
+.building {
+  width: 100%;  
+  position: relative;
+  padding-top: 80px;
+}
+
+.building::before  {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;  
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.building--prom::before {
+  background-image: url("../../assets/icons/prom-icon.svg");
+}
+
+.building--energo::before {
+  background-image: url("../../assets/icons/energo-icon.svg");
+}
+
+.building--civil::before {
+  background-image: url("../../assets/icons/civil-icon.svg");
+}
+
+.building__title {
+  @include second-level-headings();
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.building__text {
+  display: none;
+}
+
+.building__image-block {
+  width: 100%;
+  position: relative;
+}
+
+.building__image {
+  width: 100%;
+  display: block;
+}
+
+.building__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.building__button {
+  position: absolute;
+  padding: 10px 20px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: transparent;
+  border: 1px solid $white;
+  z-index: 1000;
+}
+
+.building__button span {
+  font-family: $font-prompt;
+  font-style: normal;
+  font-weight: 500; 
+  font-size: 15px;
+  line-height: 18px;
+  color: $white;
+}
+
