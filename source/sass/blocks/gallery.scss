@@ -2,3 +2,19 @@
   padding: 0 20px;
   padding-bottom: 50px;
 }
+
+.gallery__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__wrapper {   
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

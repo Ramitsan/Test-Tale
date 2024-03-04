@@ -2,3 +2,13 @@
   padding: 0 20px;
   padding-bottom: 50px;
 }
+
+@media (min-width: $tablet-width) {
+  .promo-block {
+    padding: 20px;
+    padding-bottom: 70px;
+  }
+  .promo-block__wrapper {
+    display: flex;
+  }
+}

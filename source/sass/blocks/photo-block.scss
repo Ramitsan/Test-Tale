@@ -4,6 +4,12 @@
   margin-bottom: 30px;
 }
 
+.photo-block__image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .photo-block__image {
   width: 100%;
   display: block;
@@ -28,4 +34,30 @@
   line-height: 120%;
   text-align: left;
   text-shadow: 0px 0px 8px #646262;
+}
+
+@media (min-width: $tablet-width) {
+  .photo-block {
+    width: 48%;
+    cursor: pointer;
+  }
+  .photo-block__info {
+    width: 50%;
+    padding: 10px;
+    left: 5%;
+    transform: translateX(0%);
+    transition: all 0.5s ease;
+  }
+  .photo-block:hover .photo-block__info {
+    left: 95%;
+    transform: translateX(-100%);
+  }
+
+  .photo-block__image {
+    transition: all 0.5s ease;
+  }
+
+  .photo-block:hover .photo-block__image {
+    transform: scale(1.2);
+  }
 }

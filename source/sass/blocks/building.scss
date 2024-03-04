@@ -1,30 +1,33 @@
 .building {
-  width: 100%;  
+  width: 100%;
+}
+
+.building__info-block {
   position: relative;
   padding-top: 80px;
 }
 
-.building::before  {
+.building__info-block::before {
   content: "";
   position: absolute;
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
-  background-size: 60px 60px;  
+  background-size: 60px 60px;
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.building--prom::before {
+.building__info-block--prom::before {
   background-image: url("../../assets/icons/prom-icon.svg");
 }
 
-.building--energo::before {
+.building__info-block--energo::before {
   background-image: url("../../assets/icons/energo-icon.svg");
 }
 
-.building--civil::before {
+.building__info-block--civil::before {
   background-image: url("../../assets/icons/civil-icon.svg");
 }
 
@@ -41,6 +44,7 @@
 .building__image-block {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .building__image {
@@ -72,9 +76,77 @@
 .building__button span {
   font-family: $font-prompt;
   font-style: normal;
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   color: $white;
 }
 
+@media (min-width: $tablet-width) {
+  .building {
+    transition: all 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(21, 114, 199, .07);
+      transition: all 0.5s ease;
+    }
+  }
+  .building__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .building__info-block {
+    width: 100%;
+  }
+  .building__title {
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .building__text {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    font-family: $font-roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .building--prom .building__wrapper,
+  .building--civil .building__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .building__image {
+    transition: all 0.5s ease;
+  }
+
+  .building:hover .building__image {
+    transform: scale(1.2);
+  }
+
+  .building__button {
+    top: 100%;
+    transform: translateX(-50%) translateY(100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .building__overlay {
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+ 
+  .building:hover .building__button {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.5s ease;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .building:hover .building__overlay{
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+}
