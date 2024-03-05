@@ -1,3 +1,19 @@
+.slider {
+  width: 100%;  
+  padding-bottom: 100px;
+}
+
+.slider__wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.slider__title {
+  @include second-level-headings();
+  font-size: 25px;
+  line-height: 40px;
+}
+
 .slider__list { 
   --cols: 1;
   --margin: 5px;
@@ -16,4 +32,23 @@
 
 .slider__buttons {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__title {
+    font-size: 26px;
+    font-weight: 300;
+  }
+  .slider__list { 
+    --cols: 3; 
+    overflow: visible;
+  }
+
+  .slider__item {
+    transform: translateX(0%);
+  }
+
+  .slider__buttons {
+    display: block;
+  }
 }

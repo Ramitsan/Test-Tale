@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.building__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .building__info-block {
   position: relative;
   padding-top: 80px;
@@ -84,6 +89,7 @@
 
 @media (min-width: $tablet-width) {
   .building {
+    width: 33%;
     transition: all 0.5s ease;
     &:hover {
       cursor: pointer;
@@ -91,10 +97,7 @@
       transition: all 0.5s ease;
     }
   }
-  .building__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+ 
   .building__info-block {
     width: 100%;
   }

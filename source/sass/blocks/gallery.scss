@@ -1,13 +1,14 @@
 .gallery {
-  padding: 0 20px;
+  width: 100%;
   padding-bottom: 50px;
 }
 
-.gallery__wrapper {
+.gallery__wrapper { 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 @media (min-width: $tablet-width) {
