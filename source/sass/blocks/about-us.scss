@@ -49,8 +49,25 @@
   margin: 0 auto;
 }
 
+.about-us__details {
+  position: relative;
+  color: $link-color;
+}
+
+.about-us__details::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  right: -15px;
+  background-image: url("../../assets/icons/arrow-right-hover.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+}
+
 @media (min-width: $tablet-width) {
-  .about-us {  
+  .about-us {
+    padding-bottom: 82px;
     background-image: url("../../assets/img/white-construction-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,24 +76,41 @@
   }
 
   .about-us__wrapper {
+    width: 80%;
     flex-direction: row;
-    justify-content: center;
     margin: 0 auto;
   }
 
   .about-us__item {
-    width: 40%;
+    width: 41%;
     text-align: left;
-    padding-left: 130px;
+    padding-left: 168px;
   }
 
   .about-us__item::before {
-    left: 0;
+    left: -32px;
     transform: translateX(100%);
-    top: 50%;
+    top: 46%;
+    width: 90px;
+    height: 90px;
+    background-size: 90px 90px;
   }
 
-  .about-us__text {    
+  .about-us__title {
+    margin-top: 18px;
+    margin-bottom: 5px;
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .about-us__text {
+    width: 100%;
     margin: 0;
+    margin-bottom: 10px;
+    font-family: $font-roboto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+
   }
 }

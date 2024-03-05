@@ -38,19 +38,25 @@
 
 @media (min-width: $tablet-width) {
   .photo-block {
-    width: 48%;
+    width: 49%;
+    margin-bottom: 56px;
     cursor: pointer;
   }
   .photo-block__info {
     width: 50%;
-    padding: 10px;
-    left: 5%;
+    padding: 22px 20px 22px 30px;
+    left: 4%;
+    bottom: -22px;
     transform: translateX(0%);
     transition: all 0.5s ease;
   }
   .photo-block:hover .photo-block__info {
-    left: 95%;
+    left: 97%;
     transform: translateX(-100%);
+  }
+
+  .photo-block__title {
+    font-size: 22px;
   }
 
   .photo-block__image {

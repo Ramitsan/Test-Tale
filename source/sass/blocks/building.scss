@@ -89,8 +89,9 @@
 
 @media (min-width: $tablet-width) {
   .building {
-    width: 33%;
+    width: 33.333%;
     transition: all 0.5s ease;
+
     &:hover {
       cursor: pointer;
       background-color: rgba(21, 114, 199, .07);
@@ -102,17 +103,42 @@
   .building--civil .building__wrapper {
     flex-direction: column-reverse;
   }
- 
+
   .building__info-block {
     width: 100%;
     min-height: 400px;
+    padding-top: 190px;
   }
+
+  .building__info-block::before {
+    top: 90px;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+  }
+
   .building__title {
     font-size: 22px;
     line-height: 150%;
   }
+
+  .building__title--prom {
+    margin-top: 13px;
+    margin-bottom: 10px;
+  }
+
+  .building__title--civil {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .building__title--energo {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
   .building__text {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     display: block;
     font-family: $font-roboto;
@@ -123,6 +149,8 @@
   }
 
   .building__image {
+    height: 25rem;
+    object-fit: cover;
     transition: all 0.5s ease;
   }
 
@@ -131,6 +159,7 @@
   }
 
   .building__button {
+    padding: 10px 34px;
     top: 100%;
     transform: translateX(-50%) translateY(100%);
     transition: all 0.5s ease;
@@ -141,7 +170,7 @@
     transition: all 0.5s ease;
     opacity: 0;
   }
- 
+
   .building:hover .building__button {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -150,8 +179,14 @@
     cursor: pointer;
   }
 
-  .building:hover .building__overlay{
+  .building:hover .building__overlay {
     transition: all 0.5s ease;
     opacity: 1;
+  }
+
+  .building:hover .building__info-block::before {
+    filter: saturate(0);
+    // transform: rotateY(360deg);
+    // transition: all 0.5s ease;
   }
 }

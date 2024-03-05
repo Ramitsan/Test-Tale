@@ -1,5 +1,5 @@
 .promo-block { 
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 .promo-block__wrapper {
@@ -10,12 +10,13 @@
 
 @media (min-width: $tablet-width) {
   .promo-block {
-    padding: 20px;
-    padding-bottom: 70px;
+   padding: 90px 0;
   }
 
   .promo-block__wrapper {
+    width: 94%;
+    margin: 0 auto;
     flex-direction: row;
-    padding: 0 20px;
+    padding: 0 ;
   }  
 }
