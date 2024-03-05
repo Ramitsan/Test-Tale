@@ -35,11 +35,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .slider__wrapper {
+    width: 85%;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .slider__title {
     font-size: 26px;
     font-weight: 300;
   }
   .slider__list { 
+    width: 93%;
+    margin: 0 auto;
     --cols: 3; 
     overflow: visible;
   }
@@ -50,5 +59,59 @@
 
   .slider__buttons {
     display: block;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider__button {
+    position: relative;
+    width: 27px;
+    height: 50px;    
+    padding: 0;  
+    font-size: 0;
+    background-color: transparent;  
+    outline: none;
+  }
+
+  .slider__button--prev {
+    left: 0;
+  }
+
+  .slider__button--next {
+    right: 0;
+  }
+
+  .slider__button--prev::before,
+  .slider__button--next::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 27px;
+    height: 50px;    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 27px 50px; 
+    transition: all 0.5s ease;   
+  }  
+
+  .slider__button--prev::before {
+    background-image: url("../../assets/icons/arrow-left.svg");
+  }
+
+  .slider__button--next::before {    
+    background-image: url("../../assets/icons/arrow-right.svg");  
+  }
+
+  .slider__button--prev:hover::before {
+    background-image: url("../../assets/icons/arrow-left-hover.svg");
+  }
+
+  .slider__button--next:hover::before {    
+    background-image: url("../../assets/icons/arrow-right-hover.svg");  
   }
 }

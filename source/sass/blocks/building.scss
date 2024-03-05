@@ -97,9 +97,15 @@
       transition: all 0.5s ease;
     }
   }
+
+  .building--prom .building__wrapper,
+  .building--civil .building__wrapper {
+    flex-direction: column-reverse;
+  }
  
   .building__info-block {
     width: 100%;
+    min-height: 400px;
   }
   .building__title {
     font-size: 22px;
@@ -114,10 +120,6 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 21px;
-  }
-  .building--prom .building__wrapper,
-  .building--civil .building__wrapper {
-    flex-direction: column-reverse;
   }
 
   .building__image {
