@@ -123,18 +123,18 @@
   }  
 
   .slider__button--prev::before {
-    background-image: url("../../assets/icons/arrow-left.svg");
+    background-image: url("../assets/icons/arrow-left.svg");
   }
 
   .slider__button--next::before {    
-    background-image: url("../../assets/icons/arrow-right.svg");    
+    background-image: url("../assets/icons/arrow-right.svg");    
   }
 
   .slider__button--prev:hover::before {
-    background-image: url("../../assets/icons/arrow-left-hover.svg");
+    background-image: url("../assets/icons/arrow-left-hover.svg");
   }
 
   .slider__button--next:hover::before {    
-    background-image: url("../../assets/icons/arrow-right-hover.svg");  
+    background-image: url("../assets/icons/arrow-right-hover.svg");  
   }
 }

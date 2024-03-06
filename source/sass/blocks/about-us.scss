@@ -31,11 +31,11 @@
 }
 
 .about-us__item--energo::before {
-  background-image: url("../../assets/icons/energo-icon.svg");
+  background-image: url("../assets/icons/energo-icon.svg");
 }
 
 .about-us__item--civil::before {
-  background-image: url("../../assets/icons/civil-icon.svg");
+  background-image: url("../assets/icons/civil-icon.svg");
 }
 
 .about-us__title {
@@ -60,7 +60,7 @@
   width: 10px;
   height: 20px;
   right: -15px;
-  background-image: url("../../assets/icons/arrow-right-hover.svg");
+  background-image: url("../assets/icons/arrow-right-hover.svg");
   background-repeat: no-repeat;
   background-size: 10px 20px;
 }
@@ -68,7 +68,7 @@
 @media (min-width: $tablet-width) {
   .about-us {
     padding-bottom: 82px;
-    background-image: url("../../assets/img/white-construction-bg.png");
+    background-image: url("../assets/img/white-construction-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
