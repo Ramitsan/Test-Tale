@@ -1,7 +1,13 @@
 .about-us {
   width: 100%;
-  padding-bottom: 50px;
+  padding-top: 58px;
+  padding-bottom: 40px;
   background-color: rgb(219, 219, 219);
+  background-image: url("../assets/img/white-construction-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: fixed;
 }
 
 .about-us__wrapper {
@@ -16,17 +22,18 @@
   width: 100%;
   position: relative;
   padding-top: 80px;
+  margin-bottom: 36px;
 }
 
 .about-us__item {
   &::before {
     content: "";
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 68px;
+    height: 68px;
     background-repeat: no-repeat;
-    background-size: 60px 60px;
-    top: 5px;
+    background-size: 68px 68px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -48,16 +55,26 @@
   @include second-level-headings();
   font-size: 24px;
   line-height: 32px;
+  margin-bottom: 10px;
 }
 
 .about-us__text {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  font-family: $font-roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 16px;
 }
 
 .about-us__details {
   position: relative;
   color: $color-link-active;
+  font-family: $font-prompt;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .about-us__details {
@@ -76,12 +93,8 @@
 
 @media (min-width: $desktop-width) {
   .about-us {
-    padding-bottom: 82px;
-    background-image: url("../assets/img/white-construction-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-attachment: fixed;
+    padding-top: 0px;
+    padding-bottom: 48px;
   }
 
   .about-us__wrapper {
@@ -94,6 +107,7 @@
   .about-us__item {
     width: 40%;
     text-align: left;
+    padding-top: 78px;
     padding-left: 168px;
   }
 
@@ -103,9 +117,9 @@
 
   .about-us__item {
     &::before {
-      left: -32px;
+      left: -30px;
       transform: translateX(100%);
-      top: 46%;
+      top: 45%;
       width: 90px;
       height: 90px;
       background-size: 90px 90px;
@@ -120,7 +134,6 @@
   }
 
   .about-us__text {
-    width: 100%;
     margin: 0;
     margin-bottom: 10px;
     font-family: $font-roboto;

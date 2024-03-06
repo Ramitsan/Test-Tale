@@ -1,6 +1,6 @@
 .gallery {
   width: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 26px;
 }
 
 .gallery__wrapper { 
@@ -12,6 +12,9 @@
 }
 
 @media (min-width: $tablet-width) {
+  .gallery {
+    padding-bottom: 80px;
+  }
   .gallery__wrapper {   
     width: 86%;
     margin: 0 auto;

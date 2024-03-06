@@ -1,5 +1,6 @@
 .slider {
   width: 100%;
+  padding-top: 44px;
   padding-bottom: 100px;
 }
 
@@ -140,5 +141,8 @@
 
   .slider__button--next:hover::before {
     background-image: url("../assets/icons/arrow-right-hover.svg");
+  }
+  .slider__toggles {
+    margin-top: 0;
   }
 }
