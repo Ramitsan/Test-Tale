@@ -4,6 +4,10 @@
   margin-bottom: 30px;
 }
 
+.photo-block--slider {
+    width: 100%;
+}
+
 .photo-block__image-wrapper {
   width: 100%;
   height: 100%;
@@ -42,6 +46,11 @@
     margin-bottom: 56px;
     cursor: pointer;
   }
+
+  .photo-block--slider {
+    width: 100%;
+}
+
   .photo-block__info {
     width: 50%;
     padding: 22px 20px 22px 30px;

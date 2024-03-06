@@ -16,13 +16,16 @@
 
 .slider__list { 
   --cols: 1;
-  --margin: 5px;
+  --margin: 0px;
   --position: 1;
   display: flex;
   overflow: hidden;
+  position: relative;
+  // height: 350px;
 }
 
 .slider__item {
+  position: absolute;
   margin: 0 var(--margin);
   width: calc(100% / var(--cols) - 2 * var(--margin));
   flex-shrink: 0;
@@ -32,6 +35,20 @@
 
 .slider__buttons {
   display: none;
+}
+
+.slider__toggles {
+  display: flex;  
+}
+
+.slider__toggle {
+  width: 15px;
+  height: 5px;
+  background-color: gray;
+}
+
+.slider__toggle--active {
+  background-color: blue;
 }
 
 @media (min-width: $tablet-width) {
@@ -55,10 +72,11 @@
     width: 93%;
     margin: 0 auto;
     --cols: 3; 
-    overflow: visible;
+    overflow: hidden;
   }
 
   .slider__item {
+    padding: 0 7px;
     transform: translateX(0%);
   }
 
@@ -109,7 +127,7 @@
   }
 
   .slider__button--next::before {    
-    background-image: url("../../assets/icons/arrow-right.svg");  
+    background-image: url("../../assets/icons/arrow-right.svg");    
   }
 
   .slider__button--prev:hover::before {
