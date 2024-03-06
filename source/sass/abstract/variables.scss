@@ -1,6 +1,7 @@
 $main-text-color: #444444;
 $header-color: #262626;
-$link-color: #0568C3;
+$color-link-active: #0568C3;
+$color-link-unactive: #DDDDDD;
 
 $white: #FFFFFF;
 $black: #000000;
@@ -9,3 +10,4 @@ $font-roboto: 'Roboto', 'Arial', sans-serif;
 $font-prompt: 'Prompt', 'Arial', sans-serif;
 
 $tablet-width: 768px;
+$desktop-width: 1200px;

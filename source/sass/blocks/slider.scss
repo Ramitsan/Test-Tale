@@ -1,5 +1,5 @@
 .slider {
-  width: 100%;  
+  width: 100%;
   padding-bottom: 100px;
 }
 
@@ -14,14 +14,13 @@
   line-height: 40px;
 }
 
-.slider__list { 
+.slider__list {
   --cols: 1;
   --margin: 0px;
   --position: 1;
   display: flex;
   overflow: hidden;
   position: relative;
-  // height: 350px;
 }
 
 .slider__item {
@@ -38,20 +37,25 @@
 }
 
 .slider__toggles {
-  display: flex;  
+  width: 106px;
+  height: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider__toggle {
-  width: 15px;
+  width: 30px;
   height: 5px;
-  background-color: gray;
+  background-color: $color-link-unactive;
 }
 
 .slider__toggle--active {
-  background-color: blue;
+  background-color: $color-link-active;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .slider {
     padding-top: 72px;
   }
@@ -68,20 +72,20 @@
     font-size: 26px;
     font-weight: 300;
   }
-  .slider__list { 
+
+  .slider__list {
     width: 93%;
     margin: 0 auto;
-    --cols: 3; 
+    --cols: 3;
     overflow: hidden;
   }
 
   .slider__item {
-    padding: 0 7px;
+    padding: 0 10px;
     transform: translateX(0%);
   }
 
   .slider__buttons {
-    display: block;
     position: absolute;
     width: 100%;
     top: 45%;
@@ -92,10 +96,10 @@
   .slider__button {
     position: relative;
     width: 27px;
-    height: 50px;    
-    padding: 0;  
+    height: 50px;
+    padding: 0;
     font-size: 0;
-    background-color: transparent;  
+    background-color: transparent;
     outline: none;
   }
 
@@ -115,26 +119,26 @@
     top: 0;
     left: 0;
     width: 27px;
-    height: 50px;    
+    height: 50px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 27px 50px; 
-    transition: all 0.5s ease;   
-  }  
+    background-size: 27px 50px;
+    transition: all 0.5s ease;
+  }
 
   .slider__button--prev::before {
     background-image: url("../assets/icons/arrow-left.svg");
   }
 
-  .slider__button--next::before {    
-    background-image: url("../assets/icons/arrow-right.svg");    
+  .slider__button--next::before {
+    background-image: url("../assets/icons/arrow-right.svg");
   }
 
   .slider__button--prev:hover::before {
     background-image: url("../assets/icons/arrow-left-hover.svg");
   }
 
-  .slider__button--next:hover::before {    
-    background-image: url("../assets/icons/arrow-right-hover.svg");  
+  .slider__button--next:hover::before {
+    background-image: url("../assets/icons/arrow-right-hover.svg");
   }
 }

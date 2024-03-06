@@ -12,28 +12,36 @@
   padding-top: 80px;
 }
 
-.building__info-block::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+.building__info-block {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-.building__info-block--prom::before {
-  background-image: url("../assets/icons/prom-icon.svg");
+.building__info-block--prom {
+  &::before {
+    background-image: url("../assets/icons/prom-icon.svg");
+  }
 }
 
-.building__info-block--energo::before {
-  background-image: url("../assets/icons/energo-icon.svg");
+.building__info-block--energo {
+  &::before {
+    background-image: url("../assets/icons/energo-icon.svg");
+  }
 }
 
-.building__info-block--civil::before {
-  background-image: url("../assets/icons/civil-icon.svg");
+.building__info-block--civil {
+  &::before {
+    background-image: url("../assets/icons/civil-icon.svg");
+  }
 }
 
 .building__title {
@@ -89,14 +97,7 @@
 
 @media (min-width: $tablet-width) {
   .building {
-    width: 33.333%;
-    transition: all 0.5s ease;
-
-    &:hover {
-      cursor: pointer;
-      background-color: rgba(21, 114, 199, .07);
-      transition: all 0.5s ease;
-    }
+    width: 33%;
   }
 
   .building--prom .building__wrapper,
@@ -106,19 +107,22 @@
 
   .building__info-block {
     width: 100%;
-    min-height: 400px;
-    padding-top: 190px;  
-    perspective: 300px;
+    min-height: 220px;
   }
 
-  .building__info-block::before {
-    top: 90px;
-    width: 100px;
-    height: 100px;
-    background-size: 100px 100px;
+  .building__info-block {
+    &::before {
+      top: 20px;
+      left: 51%;
+      width: 60px;
+      height: 60px;
+      background-size: 60px 60px;
+    }
   }
 
   .building__title {
+    width: 80%;
+    margin: 0 auto;
     font-size: 22px;
     line-height: 150%;
   }
@@ -136,6 +140,32 @@
   .building__title--energo {
     margin-top: 25px;
     margin-bottom: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .building {
+    width: 33.333%;
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(21, 114, 199, .07);
+      transition: all 0.5s ease;
+    }
+  }
+
+  .building__info-block {
+    min-height: 400px;
+    padding-top: 190px;
+    perspective: 300px;
+  }
+
+  .building__info-block::before {
+    top: 90px;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
   }
 
   .building__text {

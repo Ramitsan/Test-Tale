@@ -18,24 +18,30 @@
   padding-top: 80px;
 }
 
-.about-us__item::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+.about-us__item {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-.about-us__item--energo::before {
-  background-image: url("../assets/icons/energo-icon.svg");
+.about-us__item--energo {
+  &::before {
+    background-image: url("../assets/icons/energo-icon.svg");
+  }
 }
 
-.about-us__item--civil::before {
-  background-image: url("../assets/icons/civil-icon.svg");
+.about-us__item--civil {
+  &::before {
+    background-image: url("../assets/icons/civil-icon.svg");
+  }
 }
 
 .about-us__title {
@@ -51,21 +57,24 @@
 
 .about-us__details {
   position: relative;
-  color: $link-color;
+  color: $color-link-active;
 }
 
-.about-us__details::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 20px;
-  right: -15px;
-  background-image: url("../assets/icons/arrow-right-hover.svg");
-  background-repeat: no-repeat;
-  background-size: 10px 20px;
+.about-us__details {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    top: 4px;
+    right: -14px;
+    background-image: url("../assets/icons/arrow-right-hover.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+  }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .about-us {
     padding-bottom: 82px;
     background-image: url("../assets/img/white-construction-bg.png");
@@ -78,22 +87,29 @@
   .about-us__wrapper {
     width: 80%;
     flex-direction: row;
+    justify-content: flex-start;
     margin: 0 auto;
   }
 
   .about-us__item {
-    width: 41%;
+    width: 40%;
     text-align: left;
     padding-left: 168px;
   }
 
-  .about-us__item::before {
-    left: -32px;
-    transform: translateX(100%);
-    top: 46%;
-    width: 90px;
-    height: 90px;
-    background-size: 90px 90px;
+  .about-us__item:first-child {
+    margin-right: 246px;
+  }
+
+  .about-us__item {
+    &::before {
+      left: -32px;
+      transform: translateX(100%);
+      top: 46%;
+      width: 90px;
+      height: 90px;
+      background-size: 90px 90px;
+    }
   }
 
   .about-us__title {
@@ -111,6 +127,29 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: normal;
+  }
 
+  .about-us__details {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-link-active;
+      transform: scaleX(0);
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
   }
 }
