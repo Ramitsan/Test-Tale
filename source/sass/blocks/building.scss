@@ -107,7 +107,8 @@
   .building__info-block {
     width: 100%;
     min-height: 400px;
-    padding-top: 190px;
+    padding-top: 190px;  
+    perspective: 300px;
   }
 
   .building__info-block::before {
@@ -186,7 +187,7 @@
 
   .building:hover .building__info-block::before {
     filter: saturate(0);
-    // transform: rotateY(360deg);
-    // transition: all 0.5s ease;
+    transform: translateX(-50%) rotateY(360deg);
+    transition: all 0.5s ease;
   }
 }
